@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Menus";
+
+message GrpcMenu {
+  int32 id = 1;
+  string name = 2;
+  string storeId = 3;
+  string description = 4;
+  bool isActive = 5;
+  bool isDeleted = 6;
+}
+
+message GetMenusByIdsResult {
+  repeated GrpcMenu menus = 1;
+}
+
+message GetMenusByIdsRequest {
+  repeated int32 ids = 1;
+}

@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.DiscountTypes";
+
+import "DiscountTypes/Models.proto";
+
+service DiscountTypesApi {
+  rpc GetByIds(GetDiscountTypesByIdsRequest) returns (GetDiscountTypesByIdsResult);
+}

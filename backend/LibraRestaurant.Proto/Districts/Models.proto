@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Districts";
+
+message GrpcDistrict {
+  int32 districtId = 1;
+  string name = 2;
+  string nameEn = 3;
+  string fullname = 4;
+  string fullnameEn = 5;
+  string codeName = 6;
+  int32 cityId = 7;
+  bool isDeleted = 8;
+}
+
+message GetDistrictsByIdsResult {
+  repeated GrpcDistrict districts = 1;
+}
+
+message GetDistrictsByIdsRequest {
+  repeated int32 ids = 1;
+}

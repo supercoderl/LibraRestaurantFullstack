@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Districts";
+
+import "Districts/Models.proto";
+
+service DistrictsApi {
+  rpc GetByIds(GetDistrictsByIdsRequest) returns (GetDistrictsByIdsResult);
+}

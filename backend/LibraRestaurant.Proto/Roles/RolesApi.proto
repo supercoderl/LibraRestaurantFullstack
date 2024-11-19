@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Roles";
+
+import "Roles/Models.proto";
+
+service RolesApi {
+  rpc GetByIds(GetRolesByIdsRequest) returns (GetRolesByIdsResult);
+}

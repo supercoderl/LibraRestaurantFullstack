@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.OrderLines";
+
+message GrpcOrderLine {
+  int32 id = 1;
+  string orderId = 2;
+  int32 itemId = 3;
+  int32 quantity = 4;
+  double foodPrice = 5;
+  bool isCanceled = 6;
+  string canceledTime = 7;
+  string canceledReason = 8;
+  string customerReview = 9;
+  bool isDeleted = 10;
+}
+
+message GetOrderLinesByIdsResult {
+  repeated GrpcOrderLine orderLines = 1;
+}
+
+message GetOrderLinesByIdsRequest {
+  repeated int32 ids = 1;
+}

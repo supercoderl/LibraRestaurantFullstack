@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.OrderLines";
+
+import "OrderLines/Models.proto";
+
+service OrderLinesApi {
+  rpc GetByIds(GetOrderLinesByIdsRequest) returns (GetOrderLinesByIdsResult);
+}

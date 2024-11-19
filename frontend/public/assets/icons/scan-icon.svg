@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Lucide Contributors: https://lucide.dev/ -->
+<svg 
+  xmlns="http://www.w3.org/2000/svg"
+  width="25"
+  height="25"
+  viewBox="0 0 24 24"
+  stroke="#000000"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <path d="M3 7V5a2 2 0 012-2h2" />
+  <path d="M17 3h2a2 2 0 012 2v2" />
+  <path d="M21 17v2a2 2 0 01-2 2h-2" />
+  <path d="M7 21H5a2 2 0 01-2-2v-2" />
+</svg>

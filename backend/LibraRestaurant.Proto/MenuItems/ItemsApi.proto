@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.MenuItems";
+
+import "MenuItems/Models.proto";
+
+service ItemsApi {
+  rpc GetByIds(GetItemsByIdsRequest) returns (GetItemsByIdsResult);
+}

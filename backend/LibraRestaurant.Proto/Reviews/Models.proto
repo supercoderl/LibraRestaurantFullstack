@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Reviews";
+
+message GrpcReview {
+  int32 id = 1;
+  int32 itemId = 2;
+  string customerName = 3;
+  string customerEmail = 4;
+  int32 rating = 5;
+  string comment = 6;
+  string picture = 7;
+  int32 likeCounts = 8;
+  bool isVerifiedPurchase = 9;
+  string response = 10;
+}
+
+message GetReviewsByIdsResult {
+  repeated GrpcReview reviews = 1;
+}
+
+message GetReviewsByIdsRequest {
+  repeated int32 ids = 1;
+}

@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Messages";
+
+message GrpcMessage {
+  int32 id = 1;
+  string senderId = 2;
+  string reseiverId = 3;
+  string content = 4;
+  string time = 5;
+  bool isRead = 6;
+  string conversationId = 7;
+  string messageType = 8;
+  string attachmentUrl = 9;
+}
+
+message GetMessagesByIdsResult {
+  repeated GrpcMessage messages = 1;
+}
+
+message GetMessagesByIdsRequest {
+  repeated int32 ids = 1;
+}

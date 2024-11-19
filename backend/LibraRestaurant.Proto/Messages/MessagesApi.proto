@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Messages";
+
+import "Messages/Models.proto";
+
+service MessagesApi {
+  rpc GetByIds(GetMessagesByIdsRequest) returns (GetMessagesByIdsResult);
+}

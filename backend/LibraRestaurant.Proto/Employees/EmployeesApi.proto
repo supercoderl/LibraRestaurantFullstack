@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Employees";
+
+import "Employees/Models.proto";
+
+service EmployeesApi {
+  rpc GetByIds(GetEmployeesByIdsRequest) returns (GetEmployeesByIdsResult);
+}

@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Currencies";
+
+import "Currencies/Models.proto";
+
+service CurrenciesApi {
+  rpc GetByIds(GetCurrenciesByIdsRequest) returns (GetCurrenciesByIdsResult);
+}

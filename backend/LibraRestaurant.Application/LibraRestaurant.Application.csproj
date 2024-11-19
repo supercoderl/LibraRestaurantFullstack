@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CloudinaryDotNet" Version="1.26.2" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.10" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+        <PackageReference Include="payOS" Version="1.0.6" />
+        <PackageReference Include="QRCoder" Version="1.4.1" />
+        <PackageReference Include="Stripe.net" Version="45.8.0" />
+        <PackageReference Include="System.Drawing.Common" Version="8.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\LibraRestaurant.Domain\LibraRestaurant.Domain.csproj" />
+        <ProjectReference Include="..\LibraRestaurant.Proto\LibraRestaurant.Proto.csproj" />
+    </ItemGroup>
+
+
+</Project>

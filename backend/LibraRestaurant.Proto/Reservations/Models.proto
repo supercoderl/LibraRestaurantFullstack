@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Reservations";
+
+message GrpcReservation {
+  int32 reservationId = 1;
+  int32 tableNumber = 2;
+  int32 capacity = 3;
+  string storeId = 4;
+  string description = 5;
+  string reservationTime = 6;
+  int32 customerId = 7;
+  string code = 8;
+  string cleaningTime = 9;
+  bool isDeleted = 10;
+}
+
+message GetReservationsByIdsResult {
+  repeated GrpcReservation reservations = 1;
+}
+
+message GetReservationsByIdsRequest {
+  repeated int32 ids = 1;
+}

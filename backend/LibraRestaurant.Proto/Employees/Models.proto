@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Employees";
+
+message GrpcEmployee {
+  string id = 1;
+  string storeId = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string mobile = 5;
+  string email = 6;
+  bool isDeleted = 7;
+}
+
+message GetEmployeesByIdsResult {
+  repeated GrpcEmployee employees = 1;
+}
+
+message GetEmployeesByIdsRequest {
+  repeated string ids = 1;
+}

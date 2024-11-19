@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.PaymentHistories";
+
+import "PaymentHistories/Models.proto";
+
+service PaymentHistoriesApi {
+  rpc GetByIds(GetPaymentHistoriesByIdsRequest) returns (GetPaymentHistoriesByIdsResult);
+}

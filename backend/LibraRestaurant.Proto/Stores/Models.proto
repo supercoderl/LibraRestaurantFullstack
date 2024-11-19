@@ -1,0 +1,33 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Stores";
+
+message GrpcStore {
+  string storeId = 1;
+  string name = 2;
+  int32 cityId = 3;
+  int32 districtId = 4;
+  int32 wardId = 5;
+  bool isActive = 6;
+  string taxCode = 7;
+  string address = 8;
+  string gpsLocation = 9;
+  string postalCode = 10;
+  string phone = 11;
+  string fax = 12;
+  string email = 13;
+  string website = 14;
+  string logo = 15;
+  string bankBranch = 16;
+  string bankCode = 17;
+  string bankAccount = 18;
+  bool isDeleted = 19;
+}
+
+message GetStoresByIdsResult {
+  repeated GrpcStore stores = 1;
+}
+
+message GetStoresByIdsRequest {
+  repeated string ids = 1;
+}

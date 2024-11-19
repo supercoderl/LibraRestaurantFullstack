@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\LibraRestaurant.Domain\LibraRestaurant.Domain.csproj" />
+        <ProjectReference Include="..\LibraRestaurant.Proto\LibraRestaurant.Proto.csproj" />
+        <ProjectReference Include="..\LibraRestaurant.Shared\LibraRestaurant.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

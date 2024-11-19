@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Discounts";
+
+message GrpcDiscount {
+    int32 discountId = 1;
+    int32 discountTypeId = 2;
+    int32 categoryId = 3;
+    int32 itemId = 4;
+    string orderId = 5;
+    string invoiceId = 6;
+    string comments = 7;
+}
+
+message GetDiscountsByIdsResult {
+  repeated GrpcDiscount discounts = 1;
+}
+
+message GetDiscountsByIdsRequest {
+  repeated int32 ids = 1;
+}

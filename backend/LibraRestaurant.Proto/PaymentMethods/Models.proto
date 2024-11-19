@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.PaymentMethods";
+
+message GrpcPaymentMethod {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  string picture = 4;
+  bool isDeleted = 5;
+}
+
+message GetPaymentMethodsByIdsResult {
+  repeated GrpcPaymentMethod paymentMethods = 1;
+}
+
+message GetPaymentMethodsByIdsRequest {
+  repeated int32 ids = 1;
+}

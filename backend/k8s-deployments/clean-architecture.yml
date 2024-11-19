@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clean-architecture
+spec:
+  selector:
+    app: clean-architecture-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clean-architecture-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clean-architecture-app
+  template:
+    metadata:
+      labels:
+        app: clean-architecture-app
+    spec:
+      containers:
+      - name: clean-architecture-app
+        # Replace this with the path to your built image
+        image: alexdev28/clean-architecture:latest
+        ports:
+          - containerPort: 80
+        env:
+          - name: ASPNETCORE_HTTP_PORTS
+            value: 80
+          - name: Kestrel__Endpoints__Http__Url
+            value: http://+:80
+          - name: Kestrel__Endpoints__Grpc__Url
+            value: http://+:8080
+          - name: Kestrel__Endpoints__Grpc__Protocols
+            value: Http2
+          - name: ConnectionStrings__DefaultConnection
+            value: Server=sql-server;Database=clean-architecture;Trusted_Connection=False;MultipleActiveResultSets=true;TrustServerCertificate=True;User Id=SA;Password=Password123!#

@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Wards";
+
+message GrpcWard {
+  int32 wardId = 1;
+  string name = 2;
+  string nameEn = 3;
+  string fullname = 4;
+  string fullnameEn = 5;
+  string codeName = 6;
+  int32 districtId = 7;
+  bool isDeleted = 8;
+}
+
+message GetWardsByIdsResult {
+  repeated GrpcWard wards = 1;
+}
+
+message GetWardsByIdsRequest {
+  repeated int32 ids = 1;
+}

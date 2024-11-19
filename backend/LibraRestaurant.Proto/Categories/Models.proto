@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Categories";
+
+message GrpcCategory {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  bool isActive = 4;
+  string picture = 5;
+  bool isDeleted = 6;
+}
+
+message GetCategoriesByIdsResult {
+  repeated GrpcCategory categories = 1;
+}
+
+message GetCategoriesByIdsRequest {
+  repeated int32 ids = 1;
+}

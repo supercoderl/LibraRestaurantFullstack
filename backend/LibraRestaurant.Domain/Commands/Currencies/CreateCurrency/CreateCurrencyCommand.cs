@@ -1,0 +1,35 @@
+﻿
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LibraRestaurant.Domain.Commands.Currencies.CreateCurrency
+{
+    public sealed class CreateCurrencyCommand : CommandBase
+    {
+        private static readonly CreateCurrencyCommandValidation s_validation = new();
+
+        public int CurrencyId { get; }
+        public string Name { get; }
+        public string? Description { get; }
+
+        public CreateCurrencyCommand(
+            int currencyId,
+            string name,
+            string? description
+        ) : base(currencyId)
+        {
+            CurrencyId = currencyId;
+            Name = name;
+            Description = description;
+        }
+
+        public override bool IsValid()
+        {
+            ValidationResult = s_validation.Validate(this);
+            return ValidationResult.IsValid;
+        }
+    }
+}

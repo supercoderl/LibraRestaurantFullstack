@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Roles";
+
+message GrpcRole {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message GetRolesByIdsResult {
+  repeated GrpcRole roles = 1;
+}
+
+message GetRolesByIdsRequest {
+  repeated int32 ids = 1;
+}

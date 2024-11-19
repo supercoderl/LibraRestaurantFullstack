@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Customers\CustomersApi.proto" />
+      <None Remove="Customers\Models.proto" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Categories\CategoriesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Categories\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Cities\CitiesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Cities\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Currencies\CurrenciesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Currencies\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Customers\CustomersApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Customers\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Discounts\Models.proto">
+          <GrpcServices>Both</GrpcServices>
+        </Protobuf>
+        <Protobuf Include="Discounts\DiscountsApi.proto">
+          <GrpcServices>Both</GrpcServices>
+        </Protobuf>
+        <Protobuf Include="DiscountTypes\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="DiscountTypes\DiscountTypesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Districts\DistrictsApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Districts\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Menus\MenusApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Menus\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Messages\MessagesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Messages\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="OrderLines\OrderLinesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="OrderLines\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Orders\OrdersApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Orders\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="PaymentHistories\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="PaymentHistories\PaymentHistoriesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="PaymentMethods\PaymentMethodsApi.proto" GrpcServices="Both" />
+        <Protobuf Include="PaymentMethods\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Reservations\ReservationsApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Reservations\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Reviews\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Reviews\ReviewsApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Roles\RolesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Roles\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Stores\StoresApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Stores\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Employees\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="Employees\EmployeesApi.proto" GrpcServices="Both" />
+        <Protobuf Include="MenuItems\Models.proto" GrpcServices="Both" />
+        <Protobuf Include="MenuItems\ItemsApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Wards\WardsApi.proto" GrpcServices="Both" />
+        <Protobuf Include="Wards\Models.proto" GrpcServices="Both" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.27.3" />
+        <PackageReference Include="Google.Protobuf.Tools" Version="3.27.3" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.65.0" />
+    </ItemGroup>
+
+</Project>

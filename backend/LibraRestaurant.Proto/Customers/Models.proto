@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Customers";
+
+message GrpcCustomer {
+    int32 customerId = 1;
+    string name = 2;
+    string phone = 3;
+    string email = 4;
+    string address = 5;
+}
+
+message GetCustomersByIdsResult {
+  repeated GrpcCustomer customers = 1;
+}
+
+message GetCustomersByIdsRequest {
+  repeated int32 ids = 1;
+}

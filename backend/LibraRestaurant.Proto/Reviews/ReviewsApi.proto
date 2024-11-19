@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Reviews";
+
+import "Reviews/Models.proto";
+
+service ReviewsApi {
+  rpc GetByIds(GetReviewsByIdsRequest) returns (GetReviewsByIdsResult);
+}

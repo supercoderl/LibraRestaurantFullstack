@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.PaymentHistories";
+
+message GrpcPaymentHistory {
+  int32 paymentHistoryId = 1;
+  string transactionId = 2;
+  string orderId = 3;
+  int32 paymentMethodId = 4;
+  double amount = 5;
+  int32 currencyId = 6;
+  string responseJSON = 7;
+  string callbackURL = 8;
+  string createdAt = 9;
+  bool isDeleted = 10;
+}
+
+message GetPaymentHistoriesByIdsResult {
+  repeated GrpcPaymentHistory paymentHistories = 1;
+}
+
+message GetPaymentHistoriesByIdsRequest {
+  repeated int32 ids = 1;
+}

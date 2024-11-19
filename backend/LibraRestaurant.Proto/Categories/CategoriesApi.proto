@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LibraRestaurant.Proto.Categories";
+
+import "Categories/Models.proto";
+
+service CategoriesApi {
+  rpc GetByIds(GetCategoriesByIdsRequest) returns (GetCategoriesByIdsResult);
+}
